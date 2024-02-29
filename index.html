@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Piadas Engraçadas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Importa o arquivo de estilos CSS -->
+</head>
+<body>
+    <div class="container">
+    <h1>Piadas e Trocadilhos</h1>
+    <!-- Formulário para inserir uma palavra-chave -->
+    <form action="redirecionamento_api.php" method="post">
+        <label for="keyword">Digite uma palavra e eu te conto uma piada:</label> 
+    <!-- "Keyword" é o campo de entrada onde voce insere a palavra-chave para gerar uma piada -->
+        <input type="text" id="keyword" name="keyword" required>
+    <!-- Botão para enviar o formulário -->
+        <button type="submit">Conte-me uma piada!</button>
+    </form>
+    </div>
+</body>
+</html>

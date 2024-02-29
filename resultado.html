@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocadilhos</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Importa o arquivo de estilos CSS -->
+</head>
+<body>
+    <div class="container">
+    <!-- Ultilizei a palavra "Recebaaaa" como uma forma pra descontrair ja que a itenção do codigo é gerar piadas/trocadilhos -->
+    <h1>Recebaaaa</h1>
+    <!-- Contêiner para exibir a piada -->
+    <div class="piada" id="piada-container">
+
+    </div>
+    </div>
+
+    <script>
+    // Função para obter informações da URL
+        function obterParametroURL(nome) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(nome);
+        }
+
+    // Obtém a piada da URL e exibe na página
+        const piada = obterParametroURL('piada');
+        const piadaContainer = document.getElementById('piada-container');
+        if (piada) {
+    // Exibe a piada na página
+            piadaContainer.innerHTML = "<p>" + decodeURIComponent(piada) + "</p>";
+        } else {
+    // Exibe uma mensagem de erro se a piada não puder ser obtida
+            piadaContainer.innerHTML = "<p>Não foi possível obter a piada.</p>";
+        }
+    </script>
+</body>
+</html>
